@@ -16,19 +16,19 @@
     },
     {
       "code": "const btn = document.querySelector('.talk')\nconst content = document.querySelector('.content')\n\nfunction speak(text){\n    const text_speak = new SpeechSynthesisUtterance(text);\n    text_speak.voice = speechSynthesis.getVoices()[3];\n    text_speak.rate =1;\n    text_speak.pitch=0.6;\n    text_speak.volume=2;\n\n        window.speechSynthesis.speak(text_speak);\n}\n\n\n\nfunction wishMe(){\n    var day = new Date();\n    var hour = day.getHours();\n\n    if(hour>=0 && hour<12){\n        speak(\"Good Morning Tony Stark...\")\n    }\n\n    else if(hour>12 && hour<17){\n        speak(\"Good Afternoon Tony Stark.\")\n    }\n\n    else{\n        speak(\"Good EveniningTony Stark...\")\n    }\n\n}\n\n\n\nwindow.onload = ()=>{\n    speak(\"Initializing JARVIS..\");\n\n    console.log(\"Window is Loaded\");\n    wishMe();\n};\n\nconst SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;\n\nconst recognition =  new SpeechRecognition();\n\n    recognition.onresult = (event)=>{\n        const currentIndex = event.resultIndex;\n        const transcript = event.results[currentIndex][0].transcript;\n        console.log(transcript);\n        content.textContent = transcript;\n        takeCommand(transcript.toLowerCase());\n\n    }\n\nbtn.addEventListener('click', ()=>{\n    content.textContent = \"Listening....\"\n    recognition.start();\n})\n\nfunction takeCommand(message){\n    if(message.includes('hey') || message.includes('hello')){\n        speak(\"Hello Sir, How May I Help You?\");\n    }\n    else if(message.includes(\"open google\")){\n        window.open(\"https://google.com\", \"_blank\");\n        speak(\"Opening Google...\")\n    }\n    else if(message.includes(\"open youtube\")){\n        window.open(\"https://youtube.com\", \"_blank\");\n        speak(\"Opening Youtube...\")\n    }\n    else if(message.includes(\"open facebook\")){\n        window.open(\"https://facebook.com\", \"_blank\");\n        speak(\"Opening Facebook...\")\n    }\n\n    else if(message.includes('what is') || message.includes('who is') || message.includes('what are')) {\n        window.open(`https://www.google.com/search?q=${message.replace(\" \", \"+\")}`, \"_blank\");\n        const finalText = \"This is what i found on internet regarding \" + message;\n\t    speak(finalText);\n  \n    }\nelse if(message.includes('chatgpt')){\n        window.open(\"https://chatgpt.com/\", \"_blank\");\n        speak(\"Opening Chatgpt\")\n    }\n  else if(message.includes('bitcoin')){\n        window.open(\"https://in.tradingview.com/\", \"_blank\");\n        speak(\"Opening Chart of BITCOIN\")\n    }\n  else if(message.includes('game')){\n        window.open(\"https://www.crazygames.com/\", \"_blank\");\n        speak(\"Opening Games...\")\n    }\n    else if(message.includes('wikipedia')) {\n        window.open(`https://en.wikipedia.org/wiki/${message.replace(\"wikipedia\", \"\")}`, \"_blank\");\n        const finalText = \"This is what i found on wikipedia regarding \" + message.replace(\"wikipedia\",\"\");\n        speak(finalText);\n    }\n\n    else if(message.includes('time')) {\n        const time = new Date().toLocaleString(undefined, {hour: \"numeric\", minute: \"numeric\"})\n        const finalText = time;\n        speak(finalText);\n    }\n\n    else if(message.includes('date')) {\n        const date = new Date().toLocaleString(undefined, {month: \"short\", day: \"numeric\"})\n        const finalText = date;\n        speak(finalText);\n    }\n\n    else if(message.includes('calculator')) {\n        window.open('Calculator:///')\n        const finalText = \"Opening Calculator\";\n        speak(finalText);\n    }\n\n    else {\n        window.open(`https://www.google.com/search?q=${message.replace(\" \", \"+\")}`, \"_blank\");\n        const finalText = \"I found some information for \" + message + \" on google\";\n        speak(finalText);\n    }\n}\n\n",
-      "status": "[32]<br><span style=\"font-size:8px\">0ms<span></span></span>",
+      "status": "[1]<br><span style=\"font-size:8px\">0ms<span></span></span>",
       "output": "",
       "type": "code"
     },
     {
       "code": "const text_speak = new SpeechSynthesisUtterance(\"Hello World\");\n text_speak.voice = speechSynthesis.getVoices()[3];\n    text_speak.rate =1;\n    text_speak.pitch=0.6;\n    text_speak.volume=2;\n\n window.speechSynthesis.speak(text_speak);\n",
-      "status": "[33]<br><span style=\"font-size:8px\">0ms<span></span></span>",
+      "status": "[2]<br><span style=\"font-size:8px\">0ms<span></span></span>",
       "output": "",
       "type": "code"
     },
     {
       "code": "const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;\n\nconst recognition =  new SpeechRecognition();\n\n    recognition.onresult = (event)=>{\n        const currentIndex = event.resultIndex;\n        const transcript = event.results[currentIndex][0].transcript;\n        console.log(transcript);\n\t  \tscrib.show(transcript);\n        //content.textContent = transcript;\n        //takeCommand(transcript.toLowerCase());\n\n    }\nrecognition.start()",
-      "status": "[34]<br><span style=\"font-size:8px\">0ms<span></span></span>",
+      "status": "[3]<br><span style=\"font-size:8px\">0ms<span></span></span>",
       "output": "",
       "type": "code"
     },
@@ -40,19 +40,25 @@
     },
     {
       "code": "  import('https://unpkg.com/face-api.js@latest/dist/face-api.js')",
-      "status": "[35]<br><span style=\"font-size:8px\">196ms<span></span></span>",
+      "status": "[4]<br><span style=\"font-size:8px\">252ms<span></span></span>",
       "output": "{} <br>",
       "type": "code"
     },
     {
-      "code": "Promise.all([\n faceapi.nets.tinyFaceDetector.loadFromUri('https://cdn.jsdelivr.net/gh/justadudewhohacks/face-api.js@0.22.2/weights/tiny_face_detector_model-weights_manifest.json'),\n  faceapi.nets.faceLandmark68Net.loadFromUri('https://cdn.jsdelivr.net/gh/justadudewhohacks/face-api.js@0.22.2/weights/face_landmark_68_model-weights_manifest.json'),\n  faceapi.nets.faceRecognitionNet.loadFromUri('https://cdn.jsdelivr.net/gh/justadudewhohacks/face-api.js@0.22.2/weights/face_recognition_model-weights_manifest.json'),\n faceapi.nets.faceExpressionNet.loadFromUri('https://cdn.jsdelivr.net/gh/justadudewhohacks/face-api.js@0.22.2/weights/face_expression_model-weights_manifest.json')\n]).then(() => {\n  // Your code to handle the loaded models\n  console.log(\"Models loaded successfully\");\n});",
-      "status": "[36]<br><span style=\"font-size:8px\">1.997s<span></span></span>",
+      "code": "Promise.all([\n faceapi.nets.tinyFaceDetector.loadFromUri('https://cdn.jsdelivr.net/gh/justadudewhohacks/face-api.js@0.22.2/weights/tiny_face_detector_model-weights_manifest.json'),\n  faceapi.nets.faceLandmark68Net.loadFromUri('https://cdn.jsdelivr.net/gh/justadudewhohacks/face-api.js@0.22.2/weights/face_landmark_68_model-weights_manifest.json'),\n  faceapi.nets.faceRecognitionNet.loadFromUri('https://cdn.jsdelivr.net/gh/justadudewhohacks/face-api.js@0.22.2/weights/face_recognition_model-weights_manifest.json'),\n faceapi.nets.faceExpressionNet.loadFromUri('https://cdn.jsdelivr.net/gh/justadudewhohacks/face-api.js@0.22.2/weights/face_expression_model-weights_manifest.json')\n]).then(() => {\n  // Your code to handle the loaded models\n  console.log(\"Models loaded successfully\");\n  \n});",
+      "status": "[5]<br><span style=\"font-size:8px\">405ms<span></span></span>",
       "output": "",
       "type": "code"
     },
     {
-      "code": "if(scrib.isSandboxed()) alert(\"Plase take it out of sandbox by clicking the red button on top right corner\");\nvar video = document.getElementById('video');\n\nnavigator.mediaDevices.getUserMedia({ video: true })\n        .then((cameraStream) => {\n          stream = cameraStream;\n          video.srcObject = cameraStream;\n        })\n        .catch((error) => {\n         scrib.show('Error accessing camera:', error.message);\n        });\n\nvideo.addEventListener('play', () => {\n  const canvas = faceapi.createCanvasFromMedia(video)\n  document.body.append(canvas)\n  const displaySize = { width: video.width, height: video.height }\n  faceapi.matchDimensions(canvas, displaySize)\n  setInterval(async () => {\n    const detections = await faceapi.detectAllFaces(video, new faceapi.TinyFaceDetectorOptions()).withFaceLandmarks().withFaceExpressions()\n    const resizedDetections = faceapi.resizeResults(detections, displaySize)\n    canvas.getContext('2d').clearRect(0, 0, canvas.width, canvas.height)\n    faceapi.draw.drawDetections(canvas, resizedDetections)\n    faceapi.draw.drawFaceLandmarks(canvas, resizedDetections)\n    faceapi.draw.drawFaceExpressions(canvas, resizedDetections)\n  }, 100)\n})\n\n",
-      "status": "[37]<br><span style=\"font-size:8px\">0ms<span></span></span>",
+      "code": "if(scrib.isSandboxed()) alert(\"Plase take it out of sandbox by clicking the red button on top right corner\");\nvar video = document.getElementById('video');\n\nnavigator.mediaDevices.getUserMedia({ video: true })\n        .then((cameraStream) => {\n          stream = cameraStream;\n          video.srcObject = cameraStream;\n  \n  \n        })\n        .catch((error) => {\n         scrib.show('Error accessing camera:', error.message);\n        });\n\nvideo.addEventListener('play', () => {\n  const canvas = faceapi.createCanvasFromMedia(video)\n  document.body.append(canvas)\n  const displaySize = { width: video.width, height: video.height }\n  faceapi.matchDimensions(canvas, displaySize)\n  setInterval(async () => {\n    const detections = await faceapi.detectAllFaces(video, new faceapi.TinyFaceDetectorOptions()).withFaceLandmarks().withFaceExpressions()\n    const resizedDetections = faceapi.resizeResults(detections, displaySize)\n    canvas.getContext('2d').clearRect(0, 0, canvas.width, canvas.height)\n    faceapi.draw.drawDetections(canvas, resizedDetections)\n    faceapi.draw.drawFaceLandmarks(canvas, resizedDetections)\n    faceapi.draw.drawFaceExpressions(canvas, resizedDetections)\n  }, 100)\n})\n\n",
+      "status": "[7]<br><span style=\"font-size:8px\">5ms<span></span></span>",
+      "output": "",
+      "type": "code"
+    },
+    {
+      "code": "",
+      "status": "",
       "output": "",
       "type": "code"
     }
