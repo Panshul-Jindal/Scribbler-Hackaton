@@ -1,0 +1,32 @@
+{
+  "metadata": {
+    "name": "New JSNB",
+    "language_info": {
+      "name": "JavaScipt",
+      "version": "8.0"
+    }
+  },
+  "jsnbversion": "v0.1",
+  "cells": [
+    {
+      "code": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"UTF-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n  <title>Face Recognition</title>\n  <style>\n    #container {\n      display: flex;\n      justify-content: space-between;\n      width: 800px; /* Adjust the total width as needed */\n      margin: auto; /* Center the container */\n    }\n\n    #videoContainer {\n      position: relative;\n      width: 480px; /* Adjust to your video stream width */\n      height: 480px; /* Adjust to your video stream height */\n    }\n\n    #croppingBox {\n      position: absolute;\n      width: 240px;\n      height: 240px;\n      left: 50%;\n      top: 50%;\n      transform: translate(-50%, -50%);\n      border: 2px dashed red; /* Adjust styling as needed */\n      box-sizing: border-box;\n      pointer-events: none; /* Ensure the box doesn't interfere with user interaction */\n    }\n\n    #canvasContainer {\n      width: 240px; /* Adjust to your canvas width */\n      height: 240px; /* Adjust to your canvas height */\n    }\n\n    #canvas {\n      width: 100%;\n      height: 100%;\n    }\n  </style>\n</head>\n<body>\n  <div id=\"container\">\n    <div id=\"videoContainer\">\n      <video id=\"video\" width=\"400\" height=\"480\" autoplay></video>\n      <div id=\"croppingBox\"></div>\n    </div>\n    <div id=\"canvasContainer\">\n      <canvas id=\"canvas\" width=\"240\" height=\"240\"></canvas>\n    </div>\n  </div>\n  <div>\n    <button id=\"captureBtn\">Capture</button>\n<button id=\"processBtn\">Process</button>\n  </div>\n\n</body>\n</html>",
+      "status": "",
+      "output": "\n\n\n  <meta charset=\"UTF-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n  <title>Face Recognition</title>\n  <style>\n    #container {\n      display: flex;\n      justify-content: space-between;\n      width: 800px; /* Adjust the total width as needed */\n      margin: auto; /* Center the container */\n    }\n\n    #videoContainer {\n      position: relative;\n      width: 480px; /* Adjust to your video stream width */\n      height: 480px; /* Adjust to your video stream height */\n    }\n\n    #croppingBox {\n      position: absolute;\n      width: 240px;\n      height: 240px;\n      left: 50%;\n      top: 50%;\n      transform: translate(-50%, -50%);\n      border: 2px dashed red; /* Adjust styling as needed */\n      box-sizing: border-box;\n      pointer-events: none; /* Ensure the box doesn't interfere with user interaction */\n    }\n\n    #canvasContainer {\n      width: 240px; /* Adjust to your canvas width */\n      height: 240px; /* Adjust to your canvas height */\n    }\n\n    #canvas {\n      width: 100%;\n      height: 100%;\n    }\n  </style><style class=\"darkreader darkreader--sync\" media=\"screen\"></style>\n\n\n  <div id=\"container\">\n    <div id=\"videoContainer\">\n      <video id=\"video\" width=\"400\" height=\"480\" autoplay=\"\"></video>\n      <div id=\"croppingBox\"></div>\n    </div>\n    <div id=\"canvasContainer\">\n      <canvas id=\"canvas\" width=\"240\" height=\"240\"></canvas>\n    </div>\n  </div>\n  <div>\n    <button id=\"captureBtn\">Capture</button>\n<button id=\"processBtn\">Process</button>\n  </div>\n\n\n",
+      "type": "html"
+    },
+    {
+      "code": "if(scrib.isSandboxed()) alert(\"Plase take it out of sandbox by clicking the red button on top right corner\");\nvar video = document.getElementById('video');\ncapButton = document.querySelector(\"#processBtn\")\n\nprcButton.addEventListener('click', () => {\n  console.log(\"Button Clicked\");\nnavigator.mediaDevices.getUserMedia({ video: true })\n        .then((cameraStream) => {\n          stream = cameraStream;\n          video.srcObject = cameraStream;\n        })\n        .catch((error) => {\n         scrib.show('Error accessing camera:', error.message);\n        });\n})\n\n",
+      "status": "[14]<br><span style=\"font-size:8px\">3ms<span></span></span>",
+      "output": "",
+      "type": "code"
+    },
+    {
+      "code": "prcButton = document.querySelector(\"#processBtn\")\n\nprcButton.addEventListener('click', () => {\n  const canvas = faceapi.createCanvasFromMedia(video)\n  document.body.append(canvas)\n  const displaySize = { width: video.width, height: video.height }\n  faceapi.matchDimensions(canvas, displaySize)\n  setInterval(async () => {\n    const detections = await faceapi.detectAllFaces(video, new faceapi.TinyFaceDetectorOptions()).withFaceLandmarks().withFaceExpressions()\n    const resizedDetections = faceapi.resizeResults(detections, displaySize)\n    canvas.getContext('2d').clearRect(0, 0, canvas.width, canvas.height)\n    faceapi.draw.drawDetections(canvas, resizedDetections)\n    faceapi.draw.drawFaceLandmarks(canvas, resizedDetections)\n    faceapi.draw.drawFaceExpressions(canvas, resizedDetections)\n  }, 100)\n})",
+      "status": "[12]<br><span style=\"font-size:8px\">1ms<span></span></span>",
+      "output": "",
+      "type": "code"
+    }
+  ],
+  "source": "https://github.com/gopi-suvanam/jsnb",
+  "run_on_load": false
+}
