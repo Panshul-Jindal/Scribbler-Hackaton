@@ -98,7 +98,7 @@ This application consists of two main parts:
 ## How to use
 <ol>
   <li>
-    Opening the application: Load the HTML file in your browser
+    Opening the application: Load the HTML file in your Chrome browser as Speech recognition works only on Chrome*
   </li>
   <li>
     Interacting with JARVIS: 
@@ -122,7 +122,8 @@ This application consists of two main parts:
     </ul>
   </li>
 </ol>
-
+ 
+-* Our tests include Brave and Chrome
 ## List of Commands available
 Remember to use "Jarvis" before any command you give! 
 <ol>
