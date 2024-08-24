@@ -50,7 +50,7 @@ This application consists of two main parts:
       <ul>
         <li>Input button: To start voice recognition.</li>
         <li>A video container for capturing video and a canvas for facial recognition analysis.</li>
-        <li>Buttons: Capture, Process, and J.V.</li>
+        <li>Buttons: Capture, Process, and Change My Mood</li>
       </ul>
       </li>
     </ul>
@@ -71,7 +71,7 @@ This application consists of two main parts:
         <ul>
             <li>Capture Button: Accesses the camera and streams video to the video element. </li>
             <li>Process Button: Analyzes facial expressions from the video feed and updates the canvas.</li>
-            <li>J.V. Button: Performs sentiment analysis based on facial expressions and responds accordingly.</li>
+            <li>Change My Mood Button: Performs sentiment analysis based on facial expressions and responds accordingly.</li>
         </ul>
       </li>
       <li>
@@ -117,7 +117,7 @@ This application consists of two main parts:
       <li>
         Click the Process button to analyze facial expressions
       <li>
-        Click the J.V. button to analyze facial expressions and get a response based on detected emotions.
+        Click the Change My Mood button to analyze facial expressions and get a response based on detected emotions.
       </li>
     </ul>
   </li>
@@ -151,7 +151,7 @@ Remember to use "Jarvis" before any command you give!
     Chatgpt: Opens chatgpt.com
   </li>
   <li>
-    Bitcoin: 
+    Bitcoin: Opens Bitcoin chart
   </li>
   <li>
     Game: Opens game center
