@@ -124,6 +124,7 @@ This application consists of two main parts:
 </ol>
 
 ## List of Commands available
+Remember to use "Jarvis" before any command you give! 
 <ol>
   <li>
     Hey/Hello
