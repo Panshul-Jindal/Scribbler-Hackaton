@@ -28,6 +28,40 @@ This application consists of two main parts:
 
 
 ## Code overview
+<ol>
+  <li>
+    <b>HTML and CSS components: </b> 
+    <ul>
+      <li>
+        Meta Tags: Ensure proper character encoding, compatibility, and responsive design.
+      </li>
+      <li>
+        CSS Links: Includes external stylesheets for Font Awesome icons and Google Fonts.
+      </li>
+      <li>
+        Internal Styles: Styles for layout, colors, fonts, and responsiveness.
+      </li>    
+      <li>
+        Audio Elements: For playing introductory and activation sounds.
+      </li>
+      <li>
+        Main Section contains:
+      <ul>
+        <li>An image with a description.</li>
+        <li>An input area with a button to start voice recognition.</li>
+        <li>A video container for facial recognition.</li>
+        <li>Buttons for capturing video and processing facial expressions.</li>
+      </ul>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <b>Javascript Component</b>
+    <ul>
+      
+    </ul>
+  </li>
+</ol>
 
 ## How to use
 <ol>
@@ -42,6 +76,14 @@ This application consists of two main parts:
       </li>
       <li>
         Use voice commands like "Open Wikipedia", "What's the time?" and "Play Believer"
+      </li>
+      <li>
+        Click the Capture button to start the video stream.
+      </li>
+      <li>
+        Click the Process button to analyze facial expressions
+      <li>
+        Click the J.V. button to analyze facial expressions and get a response based on detected emotions.
       </li>
     </ul>
   </li>
