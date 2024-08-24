@@ -167,10 +167,7 @@ Remember to use "Jarvis" before any command you give!
   </li>
   <li>
     Date: Gives today's date
-  </li>
-  <li>
-    "keyword" Youtube: Searches for the channel "keyword" on Youtube
-  </li>    
+  </li>   
   <li> 
     Shutdown: Stops the voice recognition
   </li>
