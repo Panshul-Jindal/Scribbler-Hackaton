@@ -172,7 +172,7 @@ Remember to use "Jarvis" before any command you give!
     Shutdown: Stops the voice recognition
   </li>
   <li>
-    Many more commands that can be searched on Google.
+    Many more commands that will be searched on Google.
   </li>  
 </ol>
 
