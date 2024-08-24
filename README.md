@@ -127,52 +127,52 @@ This application consists of two main parts:
 Remember to use "Jarvis" before any command you give! 
 <ol>
   <li>
-    Hey/Hello
+    Hello: Replies Hello
   </li>
   <li>
-    What is your name?
+    What is your name? : Gives its name
   </li>
   <li>
-    Open Google
+    Open Google: opens google.com
   </li>
   <li>
-    Introduce yourself
+    Introduce yourself: Gives an intro 
   </li>
   <li>
-    Open YouTube
+    Open YouTube: Opens youtube.com
   </li>
   <li>
-    Open Facebook
+    Open Facebook: Opens facebook.com
   </li>
   <li>
-    Search "keyword"
+    Search "keyword": Searches for the "keyword" on google.com
   </li>
   <li>
-    Chatgpt
+    Chatgpt: Opens chatgpt.com
   </li>
   <li>
-    Bitcoin
+    Bitcoin: 
   </li>
   <li>
-    Game
+    Game: Opens game center
   </li>
   <li>
-    Wikipedia "keyword"
+    Wikipedia "keyword": Searches for "keyword" on Wikipedia
   </li>
   <li>
-    Time
+    Time: Gives the current time
   </li>
   <li>
-    Play "keyword"
+    Play "keyword": Plays the "keyword" on Youtube
   </li>
   <li>
-    Date
+    Date: Gives today's date
   </li>
   <li>
-    "keyword" Youtube
+    "keyword" Youtube: Searches for the channel "keyword" on Youtube
   </li>    
   <li> 
-    Shutdown
+    Shutdown: Stops the voice recognition
   </li>
   <li>
     Many more commands that can be searched on Google.
