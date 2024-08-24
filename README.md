@@ -4,7 +4,8 @@ Welcome to the JARVIS project! This web-based application is designed to act as 
 
 
 ## Overview
-This project is a simple web-based AI assistant called JARVIS. It features a user interface where you can interact with JARVIS through voice commands, capture video from your webcam, and process face detection using the face-api.js library. \
+This project is a simple web-based AI assistant called JARVIS. It features a user interface where you can interact with JARVIS through voice commands, capture video from your webcam, and process face detection using the face-api.js library. 
+</br>
 This application consists of two main parts:
 <ol>
   <li>
@@ -85,6 +86,9 @@ This application consists of two main parts:
         <ul>
           <li>Analyze Expressions: Calculates the average expression values from detected faces and responds based on the predominant emotion.
           </li>
+          <li>
+            Based on the detected sentiment, JARVIS can open relevant content or provide comforting messages.
+          </li>
         </ul>
       </li>
     </ul>
@@ -103,7 +107,8 @@ This application consists of two main parts:
         Click the microphone button to start voice recognition
       </li>
       <li>
-        Use voice commands like "Open Wikipedia", "What's the time?" and "Play Believer"
+        Use voice commands like "Jarvis, Open Wikipedia", "Jarvis, What's the time?" and "Jarvis, Play Believer". </br>
+        Remember to use "Jarvis" before any command you give!
       </li>
       <li>
         Click the Capture button to start the video stream.
