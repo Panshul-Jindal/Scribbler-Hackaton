@@ -109,7 +109,7 @@ This application consists of two main parts:
       <li>
         Use voice commands like "Jarvis, Open Wikipedia", "Jarvis, What's the time?" and "Jarvis, Play Believer". </br>
         Remember to use "Jarvis" before any command you give! </br>
-        Also, make sure to give your command within 4 seconds.
+        <h3>!! Also, make sure to give your command within 4 seconds after Jarvis starts listening. !!</h3>
       </li>
       <li>
         Click the Capture button to start the video stream.
