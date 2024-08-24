@@ -47,18 +47,46 @@ This application consists of two main parts:
       <li>
         Main Section contains:
       <ul>
-        <li>An image with a description.</li>
-        <li>An input area with a button to start voice recognition.</li>
-        <li>A video container for facial recognition.</li>
-        <li>Buttons for capturing video and processing facial expressions.</li>
+        <li>Input button: To start voice recognition.</li>
+        <li>A video container for capturing video and a canvas for facial recognition analysis.</li>
+        <li>Buttons: Capture, Process, and J.V.</li>
       </ul>
       </li>
     </ul>
   </li>
+</br>
   <li>
-    <b>Javascript Component</b>
+    <b>Javascript Component</b>  </br>
+    The Javascript file adds interactivity and functionality to the application.
     <ul>
-      
+      <li>
+        Imports: Loads the face-api.js library for facial expression analysis.
+      </li>
+      <li>
+        Model Loading: Loads pre-trained models for face detection, landmark recognition, and expression analysis.
+      </li>
+      <li>
+        Event Listeners:
+        <ul>
+            <li>Capture Button: Accesses the camera and streams video to the video element. </li>
+            <li>Process Button: Analyzes facial expressions from the video feed and updates the canvas.</li>
+            <li>J.V. Button: Performs sentiment analysis based on facial expressions and responds accordingly.</li>
+        </ul>
+      </li>
+      <li>
+        Voice Recognition:
+        <ul>
+            <li>SpeechRecognition: Uses the Web Speech API for voice command recognition.</li>
+            <li>Command Handling: Processes voice commands to perform various actions like opening websites or providing information.</li>
+        </ul>
+      </li>
+      <li>
+        Facial Expression Analysis:
+        <ul>
+          <li>Analyze Expressions: Calculates the average expression values from detected faces and responds based on the predominant emotion.
+          </li>
+        </ul>
+      </li>
     </ul>
   </li>
 </ol>
