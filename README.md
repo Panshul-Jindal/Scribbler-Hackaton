@@ -108,7 +108,8 @@ This application consists of two main parts:
       </li>
       <li>
         Use voice commands like "Jarvis, Open Wikipedia", "Jarvis, What's the time?" and "Jarvis, Play Believer". </br>
-        Remember to use "Jarvis" before any command you give!
+        Remember to use "Jarvis" before any command you give! </br>
+        Also, make sure to give your command within 4 seconds.
       </li>
       <li>
         Click the Capture button to start the video stream.
@@ -121,6 +122,62 @@ This application consists of two main parts:
     </ul>
   </li>
 </ol>
+
+## List of Commands available
+<ol>
+  <li>
+    Hey/Hello
+  </li>
+  <li>
+    What is your name?
+  </li>
+  <li>
+    Open Google
+  </li>
+  <li>
+    Introduce yourself
+  </li>
+  <li>
+    Open YouTube
+  </li>
+  <li>
+    Open Facebook
+  </li>
+  <li>
+    Search "keyword"
+  </li>
+  <li>
+    Chatgpt
+  </li>
+  <li>
+    Bitcoin
+  </li>
+  <li>
+    Game
+  </li>
+  <li>
+    Wikipedia "keyword"
+  </li>
+  <li>
+    Time
+  </li>
+  <li>
+    Play "keyword"
+  </li>
+  <li>
+    Date
+  </li>
+  <li>
+    "keyword" Youtube
+  </li>    
+  <li> 
+    Shutdown
+  </li>
+  <li>
+    Many more commands that can be searched on Google.
+  </li>  
+</ol>
+
 
 ## Dependencies
 <ol>
