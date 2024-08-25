@@ -194,3 +194,9 @@ Remember to use "Jarvis" before any command you give!
 
 ## Conclusion
 This README provides an overview of the JARVIS web application, including its structure, features, and code functionality. Feel free to explore the code to fit your needs. For any issues, please do contact us.
+
+## Collaborators List
+
+1. [G Madhava Asrith Murthy](https://github.com/madhava-asrith)
+2. [Panshul Jindal](https://github.com/Panshul-Jindal)
+3. [Shreyansh ](https://github.com/Sh-dev-rgb)
