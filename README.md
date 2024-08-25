@@ -89,6 +89,9 @@ This application consists of two main parts:
           <li>
             Based on the detected sentiment, JARVIS can open relevant content or provide comforting messages.
           </li>
+          <li>
+            Based on the detected sentiment, Jarvis can plot the expression-timeInterval graph.
+          </li>
         </ul>
       </li>
     </ul>
@@ -119,6 +122,7 @@ This application consists of two main parts:
       <li>
         Click the Change My Mood button to analyze facial expressions and get a response based on detected emotions.
       </li>
+      
     </ul>
   </li>
 </ol>
