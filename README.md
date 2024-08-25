@@ -115,7 +115,7 @@ This application consists of two main parts:
         <h3>!! Also, make sure to give your command within 4 seconds after Jarvis starts listening. !!</h3>
       </li>
       <li>
-        Click the Capture button to start the video stream.
+        Click the Capture button to start the video stream. This also starts the data collection for plotting the sentiment vs Time interval chart.
       </li>
       <li>
         Click the Process button to analyze facial expressions
