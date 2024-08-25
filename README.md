@@ -122,7 +122,6 @@ This application consists of two main parts:
       <li>
         Click the Change My Mood button to analyze facial expressions and get a response based on detected emotions.
       </li>
-      
     </ul>
   </li>
 </ol>
