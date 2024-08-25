@@ -122,6 +122,9 @@ This application consists of two main parts:
       <li>
         Click the Change My Mood button to analyze facial expressions and get a response based on detected emotions.
       </li>
+      <li>
+        To display the plot: Run the last block of code to get the plot of sentiment vs time-interval.
+      </li>
     </ul>
   </li>
 </ol>
